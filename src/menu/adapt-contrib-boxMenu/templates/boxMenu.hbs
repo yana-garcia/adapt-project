@@ -1,0 +1,74 @@
+{{import_globals}}
+
+<div class="menu__inner boxmenu__inner menu-page-container">
+
+  {{#any displayTitle subtitle body instruction}}
+  <div class="menu__header boxmenu__header menu-header">
+    <div class="menu__header-inner boxmenu__header-inner menu-header-content">
+      {{!-- <img src="../course/en/images/full-width.png"/> --}}
+      <center>
+      {{#if displayTitle}}
+      <div class="menu__title boxmenu__title">
+
+        {{#unless _disableAccessibleState}}
+        <div class="js-heading"></div>
+        {{/unless}}
+
+        <div class="menu__title-inner boxmenu__title-inner" {{#unless _disableAccessibleState}}aria-hidden="true"{{/unless}}>
+          {{{compile displayTitle}}}
+        </div>
+
+      </div>
+      {{/if}}
+      </center>
+
+      {{#if subtitle}}
+      <div class="menu__subtitle boxmenu__subtitle">
+        <div class="menu__subtitle-inner boxmenu__subtitle-inner">
+          {{{compile subtitle}}}
+        </div>
+      </div>
+      {{/if}}
+
+      <center>
+      {{#if body}}
+      <div class="menu__body boxmenu__body" style="color: #ffffff;">
+        <div class="menu__body-inner boxmenu__body-inner">
+          {{{compile body}}}
+        </div>
+      </div>
+      {{/if}}
+      </center>
+
+      {{#if instruction}}
+      <div class="menu__instruction boxmenu__instruction">
+        <div class="menu__instruction-inner boxmenu__instruction-inner">
+          {{{compile instruction}}}
+        </div>
+      </div>
+      {{/if}}
+
+    </div>
+  </div>
+  {{/any}}
+
+  
+  <div class="menu__item-container boxmenu__item-container module-container">
+    <center>
+      <h3>Modules</h3>
+      <p>Click each modules to learn more</p>
+    </center>
+    <div class="menu__item-container-inner boxmenu__item-container-inner js-children module-container-inner" role="list">
+      {{!-- Menu items render here --}}
+    </div>
+  </div>
+
+  <div style="width: 100%; height: 300px; background-color: inherit;">
+    <p>HELLO WORLD</p>
+  </div>
+
+  <div class="custom-footer">
+    <h1>FOOTER</h1>
+  </div>
+
+</div>
